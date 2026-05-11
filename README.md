@@ -1,4 +1,4 @@
-# [Cidade Jardim: Conheça Alegee]
+# [Cidade Jardim: Conheça Alegre]
 
 > Conheça a cidade mais bonita do Sul do Espirito Santo (Conhecida pela natureza, edifícios históricos e o famoso festival de música.)
 
