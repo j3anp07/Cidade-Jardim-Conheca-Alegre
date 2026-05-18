@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    margin: 0;
+}
+
+
+.herobanner {
+
+    background-image: url(./img/img01.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Ocupa 100% da altura da tela */
+
+    /* Centraliza o texto na tela inteira */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+nav h2 {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+/* O Botão */
+.btn-action {
+  background-color: #2ed573; /* Verde */
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Estilo simples para a seção de conteúdo de baixo */
+#conteudo {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: white;
+  color: #333;
+}
+
+
+/* Estilo básico da seção */
+.sobre {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+.sobre h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* 1. O CONTAINER GRID */
+.grid-fotos {
+  display: grid;
+  /* Cria 3 colunas iguais. No celular, se não couber, elas quebram linha automaticamente */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; /* Espaço entre os cards */
+  max-width: 1100px;
+  margin: 0 auto; /* Centraliza o bloco na tela */
+}
+
+/* 2. OS CARDS (LINKS) */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a foto respeite a curva do canto do card */
+  text-decoration: none; /* Remove o sublinhado de link do texto */
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: transform 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito de subir de leve quando passar o mouse no card */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 3. AS IMAGENS DENTRO DOS CARDS */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Não deixa a foto chatar, corta no tamanho certo */
+  display: block;
+}
+
+/* 4. O TEXTO DENTRO DOS CARDS */
+.card h3 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+/* Estilo do texto breve sobre a cidade */
+.texto-sobre {
+  font-size: 1.1rem;
+  line-height: 1.6; /* Deixa o espaçamento entre as linhas mais agradável */
+  color: #666; /* Um cinza escuro elegante, menos cansativo que o preto total */
+  max-width: 700px; /* Impede que o texto fique esticado de ponta a ponta em telas grandes */
+  margin: 0 auto 40px auto; /* Centraliza o bloco de texto e empurra o grid de fotos para baixo */
+}
+
+.contato {
+  padding: 50px 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.contato h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Centraliza e limita a largura do formulário */
+.contato form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Estiliza todos os campos e o botão de uma vez só */
+.contato input, 
+.contato textarea, 
+.contato button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* Estilo específico para as caixas de texto */
+.contato input, 
+.contato textarea {
+  border: 1px solid #ccc;
+}
+
+/* Estilo simples para o botão */
+.contato button {
+  background-color: #2ed573; /* O mesmo verde que você já usou */
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contato button:hover {
+  background-color: #26af5f;
+}
+
+
+footer {
+  background-color: #222; /* Fundo escuro elegante */
+  color: #aaa; /* Texto cinza claro para não cansar os olhos */
+  padding: 30px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+/* Tira as margens padrões dos parágrafos para controlar o espaçamento */
+footer p {
+  margin: 0;
+}
+
+/* Espaço simples entre a linha de direitos autorais e os créditos */
+footer .creditos {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #777; /* Deixa o seu nome um pouco mais discreto */
+}
+
+
+
+/* ==========================================================================
+   MEDIA QUERY: PARA TABLETS E CELULARES (Telas com menos de 768px de largura)
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. Reduz o tamanho das fontes no topo (nav) para não quebrar linha feio */
+  nav h1 {
+    font-size: 1.8rem; /* Era 2.5rem */
+  }
+  
+  nav h2 {
+    font-size: 1rem; /* Era 1.2rem */
+    margin-bottom: 20px;
+  }
+
+  /* 2. Diminui os espaçamentos (paddings) das seções para sobrar mais espaço na tela */
+  nav {
+    padding: 15px;
+  }
+
+  .sobre, 
+  .contato {
+    padding: 40px 15px; /* Menos espaço em cima e embaixo no celular */
+  }
+
+  /* 3. Ajusta o tamanho do título das seções */
+  .sobre h2, 
+  .contato h2 {
+    font-size: 1.5rem;
+  }
+
+  /* 4. Ajusta o texto breve sobre Alegre */
+  .texto-sobre {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  /* 5. Faz o formulário ocupar quase a tela toda no celular, sem grudar nas bordas */
+  .contato form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* ==========================================================================
+   MEDIA QUERY: PARA CELULARES MUITO PEQUENOS (Telas com menos de 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  
+  /* Deixa o botão um pouco mais confortável para o toque do dedo */
+  .btn-action,
+  .contato button {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}
