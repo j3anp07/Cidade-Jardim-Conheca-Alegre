@@ -118,6 +118,7 @@ nav h2 {
   line-height: 1.6;
   color: #666;
   max-width: 700px;
+  margin: 0 auto 40px auto; 
 }
 
 .contato {
