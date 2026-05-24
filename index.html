@@ -16,18 +16,30 @@
 
             <div class="herobanner">
 
-                <header>
 
-                    <nav>
-                        <h1>Cidade Jardim - Conheça Alegre</h1>
-                        <h2>A cidade mais bonita do Sul do Espírito Santo</h2>
+                <header class="navbar">
 
-                        <a href="#conteudo" class="btn-action">SAIBA MAIS!</a>
-                    </nav>
+                    <div class="logo"> Cidade Jardim </div>
 
+                    <button class="menu-toggle" id="menu-toggle"> &#9776; </button>
 
+                    <ul class="nav-links" id="nav-links">
+
+                        <li> <a href="#sobre"> Sobre </a></li>
+                        <li> <a href="#conteudo"> Pontos turisticos</a></li>
+                        <li> <a href="#contato"> Contato </a></li>
+
+                    </ul>
 
                 </header>
+
+                <nav class="hero-content">
+                    <h1>Cidade Jardim - Conheça Alegre</h1>
+                    <h2>A cidade mais bonita do Sul do Espírito Santo</h2>
+
+                    <a href="#conteudo" class="btn-action">SAIBA MAIS!</a>
+                </nav>
+
             </div>
 
 
@@ -76,17 +88,20 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section class="contato" id="contato">
 
 
             <h2>Tem alguma sugestão? Entre em Contato</h2>
 
-            <form action="#">
+            <form>
                 <input type="text" placeholder="Seu Nome" required>
                 <input type="email" placeholder="Seu E-mail" required>
                 <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
-                <button type="submit">Enviar</button>
+                <button type="button" id="btn-enviar">Enviar</button>
             </form>
+
+
+            <p id="form-status" style="margin-top: 15px; font-weight: bold; font-family: sans-serif;"></p>
 
         </section>
 
@@ -97,6 +112,9 @@
         </footer>
 
     </main>
+
+
+    <script src="script.js"></script>
 
 </body>
 
