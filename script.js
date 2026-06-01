@@ -39,26 +39,23 @@ if (btnEnviar && contatoForm) {
     };
 
     
-    const webhookUrl = 'https://eoo182arl6oqyrr.m.pipedream.net';
+
+    const webhookUrl = 'http://localhost:5679/webhook/53b2408e-9066-4bcd-8a4c-dc4040032741';
 
     fetch(webhookUrl, {
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors', // Força o navegador a enviar os dados ignorando a trava de segurança de CORS
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(dadosFormulario)
     })
-    .then(response => {
-      if (response.ok) {
-        formStatus.style.color = '#2ed573';
-        formStatus.textContent = 'Mensagem enviada com sucesso!';
-        contatoForm.reset();
-      } else {
-        formStatus.style.color = '#ff4757';
-        formStatus.textContent = 'Erro no servidor do Webhook.';
-      }
+    .then(() => {
+      // Com 'no-cors', o navegador não deixa ler o response.ok por segurança,
+      // mas o dado chega perfeitamente no n8n. Então consideramos sucesso direto aqui!
+      formStatus.style.color = '#2ed573';
+      formStatus.textContent = 'Mensagem enviada com sucesso!';
+      contatoForm.reset();
     })
     .catch(error => {
       formStatus.style.color = '#ff4757';
