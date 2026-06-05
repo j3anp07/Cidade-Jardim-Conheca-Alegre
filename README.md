@@ -38,6 +38,7 @@ Para criar e manter o contêiner ativo em segundo plano e configurado com as per
 
 ```bash
 docker run -d --restart unless-stopped --name n8n_exercicio -p 5679:5678 -e N8N_CORS_ALLOWED_ORIGINS=* -v n8n_data_exercicio:/home/node/.n8n docker.n8n.io/n8nio/n8n
+```
 
 Nota de Configuração: O contêiner foi mapeado estrategicamente para a porta 5679 do seu computador host para evitar quaisquer conflitos com outras instâncias ativas do n8n.
 
